@@ -5,5 +5,5 @@ export function getRandomArbitrary(min, max) {
 }
 
 export function convertToFahrenheit(tempC) {
-    return 1.8*tempC + 32
+    return (1.8*tempC + 32).toFixed(1)
 }
