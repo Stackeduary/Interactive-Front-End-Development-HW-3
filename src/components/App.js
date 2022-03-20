@@ -1,27 +1,35 @@
-import React, {useEffect, useState} from 'react'
-import WidgetGroup from './WidgetGroup'
-import {randomWeatherList} from '../util'
+import React, {useState} from 'react'
 import '../../public/index.css'
 import Dashboard from './Dashboard'
+import CityForm from './CityForm'
+import Widget from './Widget'
 
 export default function App() {
     const [cityList, setCityList] = useState([])
-    const newCity = () => setCityList([...cityList, {cityName: '', cityList: []}])
-    const deleteCity = (index) => setCityList(cityList.filter((_, cityIndex) => cityIndex !== index))
+    const [displayForm, setDisplayForm] = useState(true)
 
-    const generateCity = (cityName, index) => {
-        setCityList(cityList.map((_, cityIndex) => cityIndex === index ? {cityName: cityName, cityList: randomWeatherList()} : _))
+    const handleClick = () => setDisplayForm(true)
+
+    const addCity = (city) => {
+        setCityList([...cityList, {key: Date.now(), city}])
+        setDisplayForm(false)
     }
 
-    const addCity = (index) => {
-        setCityList(cityList.map((_, cityIndex) => cityIndex === index ? {...cityList[cityIndex], cityList: randomWeatherList()} : _))
+    const deleteCity = (key) => {
+        const removedCity = cityList.filter((cityKey) => cityKey.key !== key)
+        setCityList(removedCity)
     }
 
     return (
         <div className="widget">
-            <Dashboard onClick={newCity} />
-            {cityList.map((cityObj, cityIndex) =>
-                <WidgetGroup key={Math.random().toString()} generateCity={generateCity}
-                    addCity={addCity} deleteCity={deleteCity} city={cityObj.name} cityList={cityObj.cityList} />)}
-        </div>)
+            <Dashboard onClick={handleClick} />
+            {displayForm && <CityForm onClick={addCity}/>}
+            <div>
+                {cityList.map((inputCity) => (
+                    <Widget key={inputCity.key} city={inputCity.city} deleteCity={() => deleteCity(inputCity.key)}
+                    />
+                ))}
+            </div>
+        </div>
+    )
 }

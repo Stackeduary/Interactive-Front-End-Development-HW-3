@@ -1,201 +1,81 @@
-/* * {
-  font-family: 'Lato', sans-serif;
-}
-
-/* .container {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    columns: 2;
-    justify-content: left;
-    font-size: 2em;
-    border: 1px solid black;
-    flex-direction: column;
-    padding: 25px;
-} */
-
-.btn {
-    background-color: blue;
-    width: 20%;
-    border-radius: 5%;
-    color: white;
-    border: none;
-    margin-left: 500px;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
+* {
+font-family: 'Lato', sans-serif;
 }
 
 .btn-city {
-    background-color: orange;
-    width: 20%;
-    border-radius: 5%;
-    color: white;
-    border: none;
-    margin-left: 500px;
+background-color: orange;
+width: 20%;
+border-radius: 5%;
+color: white;
+border: none;
+margin-left: 500px;
 }
 
-.widget__button {
-    background-color: #485fc7;
-    border-radius: 4px;
-    border-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    justify-content: center;
-    padding: 8px;
-    margin: 2px;
-    text-align: center;
-    white-space: nowrap;
-  }
 
 .widget {
-  margin: 10px auto;
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #3f3f3f;
+margin: 10px auto;
+width: 300px;
+padding: 10px;
 }
 
 .widget__header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
+display: flex;
+justify-content: space-between;
+margin-bottom: 16px;
 }
 
 .widget__header h2 {
-  margin: 0;
-  font-size: 2em;
+margin: 0;
+font-size: 2em;
 }
 
 .widget__content {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5em;
+display: flex;
+flex-direction: column;
+font-size: 1.5em;
 }
 
 .widget__row {
-  display: flex;
-  gap: 8px;
-} */
-
-input {
-  box-shadow: inset 0 0.0625em 0.125em #000;
-  max-width: 100%;
-  background-color: #fff;
-  border-radius: 4px;
-  color: #363636;
-  align-items: center;
-  border: 1px solid #dbdbdb;
-  display: inline-flex;
-  font-size: 16px;
-  justify-content: flex-start;
-  padding: 7px 11px;
-  position: relative;
-  vertical-align: top;
-}
-.input__message {
-  margin-top: 4px;
-  font-size: 13px;
-}
-.input__message.error {
-  color: #f14668;
-}
-button {
-  background-color: #485fc7;
-  border-radius: 4px;
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
-  justify-content: center;
-  padding: 8px;
-  text-align: center;
-  white-space: nowrap;
-}
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-button.green {
-  background-color: #48c78e;
+display: flex;
+gap: 8px;
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;
-700&display=swap');
- @import "elements"; */
 input {
-  box-shadow: inset 0 0.0625em 0.125em #000;
-  max-width: 100%;
-  background-color: #fff;
-  border-radius: 4px;
-  color: #363636;
-  align-items: center;
-  border: 1px solid #dbdbdb;
-  display: inline-flex;
-  font-size: 16px;
-  justify-content: flex-start;
-  padding: 7px 11px;
-  position: relative;
-  vertical-align: top;
+box-shadow: inset 0 0.0625em 0.125em #000;
+max-width: 100%;
+background-color: #fff;
+border-radius: 4px;
+color: #363636;
+align-items: center;
+display: inline-flex;
+font-size: 16px;
+justify-content: flex-start;
+padding: 7px 11px;
+position: relative;
+vertical-align: top;
 }
 .input__message {
-  margin-top: 4px;
-  font-size: 13px;
+margin-top: 4px;
+font-size: 13px;
 }
 .input__message.error {
-  color: #f14668;
+color: #f14668;
 }
 button {
-  background-color: #485fc7;
-  border-radius: 4px;
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
-  justify-content: center;
-  padding: 8px;
-  text-align: center;
-  white-space: nowrap;
+background-color: #485fc7;
+border-radius: 4px;
+border-color: transparent;
+color: #fff;
+cursor: pointer;
+justify-content: center;
+padding: 8px;
+text-align: center;
+white-space: nowrap;
 }
 button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+opacity: 0.5;
+cursor: not-allowed;
 }
 button.green {
-  background-color: #48c78e;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-* {
-  font-family: 'Lato', sans-serif;
-}
-.widget {
-  margin: 10px auto;
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #3f3f3f;
-}
-.widget__header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-.widget__header h2 {
-  margin: 0;
-  font-size: 3em;
-}
-.widget__content {
-  display: flex;
-  flex-direction: column;
-  font-size: 2em;
-}
-.widget__row {
-  display: flex;
-  gap: 8px;
-}
-.widget__form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
+background-color: #48c78e;
 }

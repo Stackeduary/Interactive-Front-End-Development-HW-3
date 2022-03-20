@@ -1,15 +1,16 @@
 import {useState} from 'react'
 import PropTypes from 'prop-types'
 
-const CityForm = ({index, onClick}) => {
+const CityForm = ({onClick}) => {
     const [city, setCity] = useState('')
+
     const isButtonEnabled = city == '' || city.length > 19
 
     const changeCity = (event) => {
         setCity(event.target.value)
     }
 
-    const clickEvent = () => onClick(index, city)
+    const clickEvent = () => onClick(city)
 
     return (
         <div className='widget'>
@@ -21,7 +22,6 @@ const CityForm = ({index, onClick}) => {
 }
 
 CityForm.propTypes = {
-    index: PropTypes.func.isRequired,
     onClick: PropTypes.func.isRequired
 }
 
