@@ -32,4 +32,12 @@ const SingleWidget = ({index, cityList, city, addCity, deleteCity}) => {
     )
 }
 
+SingleWidget.propTypes = {
+    index: PropTypes.func.isRequired,
+    city: PropTypes.func.isRequired,
+    cityList: PropTypes.func.isRequired,
+    addCity: PropTypes.func.isRequired,
+    deleteCity: PropTypes.func.isRequired
+}
+
 export default SingleWidget

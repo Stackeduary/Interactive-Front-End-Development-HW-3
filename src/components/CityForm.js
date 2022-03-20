@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import PropTypes from 'prop-types'
 
-const CityForm = ({cityProp}) => {
+const CityForm = ({index, onClick}) => {
     const [city, setCity] = useState('')
     const isButtonEnabled = city == '' || city.length > 19
 
@@ -9,9 +9,7 @@ const CityForm = ({cityProp}) => {
         setCity(event.target.value)
     }
 
-    const clickEvent = () => {
-        cityProp(city)
-    }
+    const clickEvent = () => onClick(index, city)
 
     return (
         <div className='widget'>
@@ -21,8 +19,10 @@ const CityForm = ({cityProp}) => {
         </div>
     )
 }
+
 CityForm.propTypes = {
-    cityProp: PropTypes.func.isRequired
+    index: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired
 }
 
 export default CityForm
