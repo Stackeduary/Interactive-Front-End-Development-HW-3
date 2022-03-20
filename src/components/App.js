@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react'
+import Weather from './Weather'
 import Header from './Header'
 import {getRandomArbitrary, weatherIcons} from '../util'
-
 import '../../public/index.css'
-import Weather from './Weather'
 
 export default function App() {
     const [temperature, setTemperature] = useState(null)
@@ -22,12 +21,12 @@ export default function App() {
         generateWeather()
     }, [])
 
-    const onCityChange = (e) => {
-        setCity(e.target.value)
+    const onCityChange = (event) => {
+        setCity(event.target.value)
     }
 
-    const showWeather = (e) => {
-        e.preventDefault()
+    const showWeather = (event) => {
+        event.preventDefault()
 
         if (city.length === 0 || city.length >= 20) {
             return null
@@ -43,13 +42,13 @@ export default function App() {
                     <div className="input__container">
                         <input autoFocus type="text" onChange={onCityChange}/>
                         {
-                            city.length >= 20 && <span className="input__message error">City name is too long</span>
+                            city.length >= 20 && <span className="input__message error">City name is too long!</span>
                         }
                     </div>
                     <button
                         disabled={city.length === 0 || city.length >= 20}
                         type="submit"
-                        className="widget__button green">
+                        className="widget__button orange">
                         Show Weather
                     </button>
                 </form>
