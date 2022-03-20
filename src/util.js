@@ -1,9 +1,13 @@
-export const weatherIcons = ['☀️', '⛅', '☁️', '🌩️', '🌧️', '🌦️', '🌨️']
+export const randomNum = (min, max) => Math.ceil(Math.random() * (max - min) + min)
 
-export function getRandomArbitrary(min, max) {
-    return Math.ceil(Math.random() * (max - min) + min)
-}
+export const emojiList = ['☀️', '⛅', '☁️', '🌩️', '🌧️', '🌦️', '🌨️']
 
-export function convertToFahrenheit(tempC) {
-    return (1.8*tempC + 32).toFixed(1)
-}
+export const randomTemp = () => randomNum(-20, 30)
+export const randomPrecip = () => emojiList[randomNum(0, 6)]
+export const randomWind = () => randomNum(0, 10)
+
+export const listify = (rt, rp, rw) => [rt, rp, rw]
+
+export const randomWeatherList = () => listify(randomTemp, randomPrecip, randomWind)
+
+export const convertToFahrenheit = (tempC) => (1.8*tempC + 32).toFixed(1)
